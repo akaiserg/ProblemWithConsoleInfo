@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> Test</title>
+    </head>
+<body>
+    <br>
+    <h1 style="text-align: center">Open the Console to see the result. </h1>
+</body>
+</html>
+
+<script type="text/javascript">
+    // module
+    var Module1= function(){
+        "use strict";
+        this.generateArrayObject=function(){
+            var arrayObj=[];
+            console.info(arrayObj);
+            arrayObj.push({a:1,b:2});
+            arrayObj.push({a2:null,b2:null});
+            console.info(arrayObj);
+            return arrayObj;
+        }
+    };
+
+    var m1= new Module1();
+    // getting the array
+    var aObj= m1.generateArrayObject();
+    console.group(" Part one");
+        console.info(aObj);
+        console.log(aObj[1]);
+        console.table(aObj);
+    console.groupEnd();
+    aObj[1].a2="New value 1";
+    console.group(" Part two");
+        console.info(aObj);
+        console.log(aObj[1]);
+        console.table(aObj);
+    console.groupEnd;
+    aObj[1].b2="New value 2";
+    console.group(" Part three");
+        console.info(aObj);
+        console.log(aObj[1]);
+        console.table(aObj);
+    console.groupEnd;
+    aObj.push({a3:null,b3:null});
+    console.group(" Part four");
+    console.info(aObj);
+    console.log(aObj[1]);
+    console.table(aObj);
+    console.groupEnd;
+
+    // new array
+    var aObj2= m1.generateArrayObject();
+    console.group(" Part five");
+    console.info(aObj2);
+    console.log(aObj2[1]);
+    console.table(aObj2);
+    console.groupEnd;
+
+
+
+</script>
